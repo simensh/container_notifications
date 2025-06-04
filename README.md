@@ -6,7 +6,7 @@ These are the steps to create the container, push the container to azure and run
 ```bash
 docker buildx build --platform=linux/amd64 -t bolia-dockers . #selecting linux/amd64 since it's going to be pushed to a Linux container in Azure.
 ```
-2. Create a Resource Group and an Azure Container Registry (ACI) in Azure (done through the GUI here, and called them "Slack varslinger" and "varslinger")
+2. Create a Resource Group and an Azure Container Registry (ACI) in Azure (done through the GUI here, and called them "Slack varslinger" and "varslinger"). This could have been done through the CLI, but have done it in the GUI for these specific resources.
 
 3. Log in to Azure and to Azure Container Registry (ACI):
 ```bash
@@ -15,7 +15,7 @@ az acr login --name varslinger
 ```
 4. Tag and push the image you have built to Azure:
 ```bash
-docker tag bolia-dockers varslinger.azurecr.io/bolia-dockerss
+docker tag bolia-dockers varslinger.azurecr.io/bolia-dockers
 docker push varslinger.azurecr.io/bolia-dockers:latest
 ```
 4. Create an Azure Container App job:
