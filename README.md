@@ -1,7 +1,5 @@
 # Way of working
 
-This is a demo of how you can build a container and schedule it in Azure, and then sending you notifications on Slack with the result.
-
 These are the steps to create the container, push the container to azure and run the container in azure:
 
 1. When you are in the correct folder (container_notifications), build the Docker image locally and tag it
